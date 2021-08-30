@@ -22,7 +22,7 @@ app.post('/usuario', function (req, res) {
 app.put('/usuario/:id', function (req, res) {
   let id=req.params.id
   res.json({
-    id
+    id:id
   })
 })
 app.get('/usuario', function (req, res) {
