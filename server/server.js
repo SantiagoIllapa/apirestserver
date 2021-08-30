@@ -5,7 +5,7 @@ const app = express()
 app.use(express.urlencoded({ extended:false}))
 app.use(express.json())
 
-app.post('/postusuario', function (req, res) {
+app.post('/usuario', function (req, res) {
   let body=req.body;
   if(body.nombre===undefined){
     res.status(400).json({
@@ -19,16 +19,16 @@ app.post('/postusuario', function (req, res) {
   }
   
 })
-app.put('/putusuario/:id', function (req, res) {
+app.put('/usuario/:id', function (req, res) {
   let id=req.params.id
   res.json({
     id:id
   })
 })
-app.get('/getusuario', function (req, res) {
+app.get('/usuario', function (req, res) {
   res.json('get Usuario')
 })
-app.delete('/deleteusuario', function (req, res) {
+app.delete('/usuario', function (req, res) {
   res.json('delete Usuario')
 })
 app.listen(process.env.PORT,()=>{
